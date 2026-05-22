@@ -1,214 +1,214 @@
 import { motion } from "framer-motion";
+
+import todoImage from "../assets/images/todoImage.png";
+import weatherImage from "../assets/images/weatherImage.png";
+import portfolioImage from "../assets/images/portfolioImage.png";
+
 function Projects() {
+
+  const projects = [
+
+    {
+      title: "Todo App",
+      description:
+        "A modern task management application built with React and Tailwind CSS featuring responsive design and smooth UI interactions.",
+      image: todoImage,
+      live: "https://your-live-link.com",
+      github: "https://github.com/yourusername/todo-app",
+    },
+
+    {
+      title: "Weather App",
+      description:
+        "A weather forecasting application using real-time API data with responsive UI and dynamic weather updates.",
+      image: weatherImage,
+      live: "https://your-live-link.com",
+      github: "https://github.com/yourusername/weather-app",
+    },
+
+    {
+      title: "Portfolio Website",
+      description:
+        "A fully responsive developer portfolio built with React, Tailwind CSS, Framer Motion, and modern frontend technologies.",
+      image: portfolioImage,
+      live: "https://your-live-link.com",
+      github: "https://github.com/yourusername/portfolio-website",
+    },
+
+  ];
+
   return (
+
     <motion.section
 
-  initial={{ opacity: 0, y: 100 }}
+      id="projects"
 
-  whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 100 }}
 
-  transition={{ duration: 1 }}
+      whileInView={{ opacity: 1, y: 0 }}
 
-  viewport={{ once: true }}id="projects" className="px-6 py-32 bg-slate-900">
+      transition={{ duration: 1 }}
 
-      <div className="max-w-6xl mx-auto">
+      viewport={{ once: true }}
 
-        <h2 className="text-5xl font-bold text-center mb-20">
+      className="py-28 px-6 relative"
 
-          My Projects
+    >
 
-        </h2>
+      <div className="max-w-7xl mx-auto">
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Section Header */}
 
-          {/* PROJECT 1 */}
+        <div className="text-center mb-20">
 
-          <div className="bg-slate-950 border border-slate-800 rounded-2xl p-8 hover:-translate-y-3 hover:border-blue-500 transition duration-300 shadow-lg">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
 
-            <div className="h-48 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 mb-6"></div>
+            My <span className="text-blue-400">Projects</span>
 
-            <h3 className="text-2xl font-semibold mb-4">
+          </h2>
 
-              Portfolio Website
+          <p className="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
 
-            </h3>
+            Here are some of the projects I’ve built using modern
+            frontend technologies, responsive design principles,
+            and interactive user experiences.
 
-            <p className="text-slate-400 mb-6 leading-7">
+          </p>
 
-              A modern responsive portfolio website
-              built using React and Tailwind CSS.
+        </div>
 
-            </p>
+        {/* Projects Grid */}
 
-            <div className="flex flex-wrap gap-3 mb-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                React
-              </span>
+          {projects.map((project, index) => (
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                Tailwind
-              </span>
+            <motion.div
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                JavaScript
-              </span>
+              key={index}
 
-            </div>
+              initial={{ opacity: 0, y: 100 }}
 
-            <div className="flex gap-4">
+              whileInView={{ opacity: 1, y: 0 }}
 
-  <a
-    href="https://github.com/"
-    target="_blank"
-    className="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl transition w-full text-center"
-  >
+              transition={{ duration: 0.8, delay: index * 0.2 }}
 
-    GitHub
+              viewport={{ once: true }}
 
-  </a>
+              className="
 
-  <a
-    href="https://vercel.com/"
-    target="_blank"
-    className="border border-slate-700 hover:border-blue-500 px-5 py-3 rounded-xl transition w-full text-center"
-  >
+                bg-slate-900
+                rounded-3xl
+                overflow-hidden
 
-    Live Demo
+                shadow-2xl
 
-  </a>
+                border
+                border-slate-800
 
-</div>
+                hover:scale-105
+                hover:shadow-blue-500/20
 
-          </div>
+                transition
+                duration-500
 
-          {/* PROJECT 2 */}
+              "
 
-          <div className="bg-slate-950 border border-slate-800 rounded-2xl p-8 hover:-translate-y-3 hover:border-blue-500 transition duration-300 shadow-lg">
+            >
 
-            <div className="h-48 rounded-xl bg-gradient-to-br from-green-500 to-emerald-700 mb-6"></div>
+              {/* Project Image */}
 
-            <h3 className="text-2xl font-semibold mb-4">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-56 w-full object-cover"
+              />
 
-              Todo App
+              {/* Project Content */}
 
-            </h3>
+              <div className="p-8">
 
-            <p className="text-slate-400 mb-6 leading-7">
+                <h3 className="text-3xl font-bold mb-4">
 
-              A task management application with
-              dynamic React functionality.
+                  {project.title}
 
-            </p>
+                </h3>
 
-            <div className="flex flex-wrap gap-3 mb-6">
+                <p className="text-slate-400 leading-7 mb-8">
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                React
-              </span>
+                  {project.description}
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                Hooks
-              </span>
+                </p>
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                CSS
-              </span>
+                {/* Buttons */}
 
-            </div>
+                <div className="flex gap-4 flex-wrap">
 
-           <div className="flex gap-4">
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
 
-  <a
-    href="https://github.com/"
-    target="_blank"
-    className="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl transition w-full text-center"
-  >
+                      bg-blue-600
+                      hover:bg-blue-700
 
-    GitHub
+                      px-5
+                      py-3
 
-  </a>
+                      rounded-xl
 
-  <a
-    href="https://vercel.com/"
-    target="_blank"
-    className="border border-slate-700 hover:border-blue-500 px-5 py-3 rounded-xl transition w-full text-center"
-  >
+                      transition
+                      duration-300
 
-    Live Demo
+                    "
+                  >
 
-  </a>
+                    Live Demo
 
-</div>
+                  </a>
 
-          </div>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
 
-          {/* PROJECT 3 */}
+                      border
+                      border-white
 
-          <div className="bg-slate-950 border border-slate-800 rounded-2xl p-8 hover:-translate-y-3 hover:border-blue-500 transition duration-300 shadow-lg">
+                      px-5
+                      py-3
 
-            <div className="h-48 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 mb-6"></div>
+                      rounded-xl
 
-            <h3 className="text-2xl font-semibold mb-4">
+                      hover:bg-white
+                      hover:text-black
 
-              Weather App
+                      transition
+                      duration-300
 
-            </h3>
+                    "
+                  >
 
-            <p className="text-slate-400 mb-6 leading-7">
+                    GitHub
 
-              A weather application using APIs
-              and responsive UI design.
+                  </a>
 
-            </p>
+                </div>
 
-            <div className="flex flex-wrap gap-3 mb-6">
+              </div>
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                API
-              </span>
+            </motion.div>
 
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                React
-              </span>
-
-              <span className="bg-slate-800 px-3 py-1 rounded-lg text-sm">
-                Tailwind
-              </span>
-
-            </div>
-
-            <div className="flex gap-4">
-
-  <a
-    href="https://github.com/"
-    target="_blank"
-    className="bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl transition w-full text-center"
-  >
-
-    GitHub
-
-  </a>
-
-  <a
-    href="https://vercel.com/"
-    target="_blank"
-    className="border border-slate-700 hover:border-blue-500 px-5 py-3 rounded-xl transition w-full text-center"
-  >
-
-    Live Demo
-
-  </a>
-
-</div>
-
-          </div>
+          ))}
 
         </div>
 
       </div>
 
     </motion.section>
+
   );
 }
 

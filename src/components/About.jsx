@@ -1,64 +1,180 @@
 import { motion } from "framer-motion";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+function About() {
 
-function Hero() {
   return (
 
     <motion.section
 
-      id="home"
+      id="about"
 
       initial={{ opacity: 0, y: 100 }}
 
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
 
       transition={{ duration: 1 }}
 
-      className="flex flex-col justify-center items-center text-center px-6 py-32"
+      viewport={{ once: true }}
+
+      className="py-28 px-6 relative"
+
     >
 
-      <h2 className="text-6xl md:text-7xl font-bold max-w-5xl leading-tight">
+      <div className="max-w-6xl mx-auto">
 
-        Building Modern React Websites 🚀
+        {/* Section Title */}
 
-      </h2>
+        <div className="text-center mb-20">
 
-      <p className="text-slate-400 text-xl mt-8 max-w-2xl leading-8">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
 
-        I create responsive and modern frontend applications
-        using React, JavaScript, and Tailwind CSS.
+            About <span className="text-blue-400">Me</span>
 
-      </p>
+          </h2>
 
-      <button className="mt-10 bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-lg transition hover:scale-105">
+          <p className="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
 
-        View Projects
+            Passionate frontend developer dedicated to building
+            modern, responsive, and interactive web applications
+            with clean user experiences and modern technologies.
 
-      </button>
+          </p>
 
-      <div className="flex gap-8 mt-10 text-4xl">
+        </div>
 
-        <a
-          href="https://github.com/"
-          target="_blank"
-          className="hover:text-blue-400 transition hover:scale-110"
-        >
-          <FaGithub />
-        </a>
+        {/* Main Content */}
 
-        <a
-          href="https://linkedin.com/"
-          target="_blank"
-          className="hover:text-blue-400 transition hover:scale-110"
-        >
-          <FaLinkedin />
-        </a>
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+
+          {/* Left Side */}
+
+          <motion.div
+
+            initial={{ opacity: 0, x: -100 }}
+
+            whileInView={{ opacity: 1, x: 0 }}
+
+            transition={{ duration: 1 }}
+
+            viewport={{ once: true }}
+
+          >
+
+            <div className="bg-slate-900 p-10 rounded-3xl shadow-2xl border border-slate-800 hover:scale-105 transition duration-500">
+
+              <h3 className="text-3xl font-bold mb-6 text-blue-400">
+
+                Who I Am
+
+              </h3>
+
+              <p className="text-slate-300 leading-8 text-lg">
+
+                I specialize in creating modern frontend applications
+                using React, JavaScript, Tailwind CSS, and modern
+                UI/UX practices.
+
+                <br /><br />
+
+                I enjoy transforming ideas into beautiful and
+                interactive digital experiences that are responsive,
+                user-friendly, and performance optimized.
+
+              </p>
+
+            </div>
+
+          </motion.div>
+
+          {/* Right Side */}
+
+          <motion.div
+
+            initial={{ opacity: 0, x: 100 }}
+
+            whileInView={{ opacity: 1, x: 0 }}
+
+            transition={{ duration: 1 }}
+
+            viewport={{ once: true }}
+
+            className="grid grid-cols-2 gap-6"
+
+          >
+
+            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+
+              <h3 className="text-5xl font-bold text-blue-400 mb-4">
+
+                10+
+
+              </h3>
+
+              <p className="text-slate-300">
+
+                Projects Built
+
+              </p>
+
+            </div>
+
+            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+
+              <h3 className="text-5xl font-bold text-blue-400 mb-4">
+
+                2+
+
+              </h3>
+
+              <p className="text-slate-300">
+
+                Years Learning
+
+              </p>
+
+            </div>
+
+            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+
+              <h3 className="text-5xl font-bold text-blue-400 mb-4">
+
+                100%
+
+              </h3>
+
+              <p className="text-slate-300">
+
+                Responsive Design
+
+              </p>
+
+            </div>
+
+            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+
+              <h3 className="text-5xl font-bold text-blue-400 mb-4">
+
+                React
+
+              </h3>
+
+              <p className="text-slate-300">
+
+                Main Framework
+
+              </p>
+
+            </div>
+
+          </motion.div>
+
+        </div>
 
       </div>
 
     </motion.section>
+
   );
 }
 
-export default Hero;
+export default About;
