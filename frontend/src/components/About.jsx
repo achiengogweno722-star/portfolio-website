@@ -32,7 +32,7 @@ function About() {
 
           </h2>
 
-          <p className="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
+          <p className="text-slate-700 dark:text-slate-400 text-lg max-w-3xl mx-auto leading-8">
 
             Passionate frontend developer dedicated to building
             modern, responsive, and interactive web applications
@@ -60,7 +60,7 @@ function About() {
 
           >
 
-            <div className="bg-slate-900 p-10 rounded-3xl shadow-2xl border border-slate-800 hover:scale-105 transition duration-500">
+            <div className="bg-slate-100 dark:bg-slate-900 p-10 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition duration-500">
 
               <h3 className="text-3xl font-bold mb-6 text-blue-400">
 
@@ -68,7 +68,7 @@ function About() {
 
               </h3>
 
-              <p className="text-slate-300 leading-8 text-lg">
+              <p className="text-slate-800 dark:text-slate-300 leading-8 text-lg">
 
                 I specialize in creating modern frontend applications
                 using React, JavaScript, Tailwind CSS, and modern
@@ -102,7 +102,7 @@ function About() {
 
           >
 
-            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+            <div className="bg-slate-100 dark:bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-200 dark:border-slate-800">
 
               <h3 className="text-5xl font-bold text-blue-400 mb-4">
 
@@ -110,7 +110,7 @@ function About() {
 
               </h3>
 
-              <p className="text-slate-300">
+              <p className="text-slate-800 dark:text-slate-300">
 
                 Projects Built
 
@@ -118,7 +118,7 @@ function About() {
 
             </div>
 
-            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+            <div className="bg-slate-100 dark:bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-200 dark:border-slate-800">
 
               <h3 className="text-5xl font-bold text-blue-400 mb-4">
 
@@ -126,7 +126,7 @@ function About() {
 
               </h3>
 
-              <p className="text-slate-300">
+              <p className="text-slate-800 dark:text-slate-300">
 
                 Years Learning
 
@@ -134,7 +134,7 @@ function About() {
 
             </div>
 
-            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+            <div className="bg-slate-100 dark:bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-200 dark:border-slate-800">
 
               <h3 className="text-5xl font-bold text-blue-400 mb-4">
 
@@ -142,7 +142,7 @@ function About() {
 
               </h3>
 
-              <p className="text-slate-300">
+              <p className="text-slate-800 dark:text-slate-300">
 
                 Responsive Design
 
@@ -150,7 +150,7 @@ function About() {
 
             </div>
 
-            <div className="bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-800">
+            <div className="bg-slate-100 dark:bg-slate-900 p-8 rounded-3xl text-center shadow-xl hover:scale-105 transition duration-500 border border-slate-200 dark:border-slate-800">
 
               <h3 className="text-5xl font-bold text-blue-400 mb-4">
 
@@ -158,7 +158,7 @@ function About() {
 
               </h3>
 
-              <p className="text-slate-300">
+              <p className="text-slate-800 dark:text-slate-300">
 
                 Main Framework
 

@@ -51,7 +51,7 @@ function Projects() {
 
       viewport={{ once: true }}
 
-      className="py-28 px-6 relative"
+      className="py-28 px-6 relative bg-slate-950"
 
     >
 
@@ -67,7 +67,7 @@ function Projects() {
 
           </h2>
 
-          <p className="text-slate-400 text-lg max-w-3xl mx-auto leading-8">
+          <p className="text-slate-300 text-lg max-w-3xl mx-auto leading-8">
 
             Here are some of the projects I’ve built using modern
             frontend technologies, responsive design principles,
@@ -128,13 +128,13 @@ function Projects() {
 
               <div className="p-8">
 
-                <h3 className="text-3xl font-bold mb-4">
+                <h3 className="text-3xl font-bold mb-4 text-white">
 
                   {project.title}
 
                 </h3>
 
-                <p className="text-slate-400 leading-7 mb-8">
+                <p className="text-slate-300 leading-7 mb-8">
 
                   {project.description}
 
@@ -152,6 +152,7 @@ function Projects() {
 
                       bg-blue-600
                       hover:bg-blue-700
+                      text-white
 
                       px-5
                       py-3
@@ -175,7 +176,8 @@ function Projects() {
                     className="
 
                       border
-                      border-white
+                      border-white/20
+                      text-white
 
                       px-5
                       py-3
